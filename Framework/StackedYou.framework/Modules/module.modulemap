@@ -1,0 +1,11 @@
+framework module StackedYou {
+  umbrella header "StackedYou.h"
+
+  export *
+  module * { export * }
+}
+
+module StackedYou.Swift {
+    header "StackedYou-Swift.h"
+    requires objc
+}
