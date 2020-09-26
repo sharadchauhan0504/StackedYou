@@ -79,12 +79,12 @@ class CardSelectionView: UIView {
     }
     
     private func initialSetup() {
-        backgroundColor = .white
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
-        tapGesture.cancelsTouchesInView = false
+        backgroundColor                 = .white
+        let tapGesture                  = UITapGestureRecognizer(target: self, action: #selector(handleTapGesture(_:)))
+        tapGesture.cancelsTouchesInView = true
         addGestureRecognizer(tapGesture)
-        let edgeSwipeGesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgeSwipeGesture(_:)) )
-        edgeSwipeGesture.edges = .right
+        let edgeSwipeGesture            = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleEdgeSwipeGesture(_:)) )
+        edgeSwipeGesture.edges          = .right
         addGestureRecognizer(edgeSwipeGesture)
     }
     
